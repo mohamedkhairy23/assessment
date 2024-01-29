@@ -89,19 +89,8 @@ const Two = () => {
           </table>
 
           {!loading && users.length === 0 && <div>No users available.</div>}
-
-          <button
-            class={
-              loading || page > 5
-                ? "bg-blue-500 text-white font-bold py-2 px-4 rounded-full flex items-center justify-center"
-                : "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full flex items-center justify-center"
-            }
-            onClick={loadUsers}
-            disabled={loading || page > 5}
-          >
-            {loading ? "Loading..." : "Load More"}
-          </button>
         </div>
+
         <Modal show={openModal} onClose={() => setOpenModal(false)}>
           <Modal.Header>Edit Item On Locale State</Modal.Header>
           <Modal.Body>
@@ -185,6 +174,19 @@ const Two = () => {
             </Button>
           </Modal.Footer>
         </Modal>
+      </div>
+      <div className=" flex items-center justify-center">
+        <button
+          class={
+            loading || page > 5
+              ? "bg-blue-500 text-white font-bold py-2 px-4 rounded-full"
+              : "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+          }
+          onClick={loadUsers}
+          disabled={loading || page > 5}
+        >
+          {loading ? "Loading..." : "Load More"}
+        </button>{" "}
       </div>
     </>
   );
