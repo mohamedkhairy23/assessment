@@ -42,13 +42,21 @@ function Three() {
       <div className="flex justify-center items-center">
         <button
           onClick={handleButtonClick1}
-          className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l"
+          className={
+            count === 1
+              ? "bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-l"
+              : "bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l"
+          }
         >
           Prev
         </button>
         <button
           onClick={handleButtonClick2}
-          className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r"
+          className={
+            count === 1
+              ? "bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-r"
+              : "bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r"
+          }
         >
           Next
         </button>
