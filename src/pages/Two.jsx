@@ -55,7 +55,7 @@ const Two = () => {
       <h1 className="text-3xl font-bold text-center underline my-3">
         Note: Email is a unique value(Will not update it)
       </h1>
-      <div className="flex items-center justify-center my-5">
+      <div className="flex items-center justify-center my-5 mx-1">
         <div class="overflow-x-auto">
           <table className="min-w-full bg-white shadow-md rounded-xl">
             <thead>
