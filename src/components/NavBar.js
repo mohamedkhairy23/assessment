@@ -9,10 +9,10 @@ export default function NavBar() {
         fluid
         rounded
       >
+        <Link to="/">
+          <h1 className="text-3xl font-bold text-center my-3">Home</h1>
+        </Link>
         <div className="flex gap-2 md:order-2">
-          <Link to="/">
-            <Button className="bg-teal-700">Home</Button>
-          </Link>
           <Navbar.Toggle />
         </div>{" "}
         <Navbar.Collapse>

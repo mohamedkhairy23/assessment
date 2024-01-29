@@ -53,7 +53,7 @@ function Three() {
         <button
           onClick={handleButtonClick2}
           className={
-            count === 1
+            count === 4
               ? "bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-r"
               : "bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r"
           }
