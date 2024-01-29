@@ -1,20 +1,38 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 function Three() {
   const [button1Clicked, setButton1Clicked] = useState(false);
   const [button2Clicked, setButton2Clicked] = useState(false);
-  const [message, setMessage] = useState();
+  const [count, setCount] = useState(1);
+  const [message, setMessage] = useState("");
+
+  useEffect(() => {
+    if (count === 1) {
+      setMessage("Just Start And Just Do It");
+    } else if (count === 2) {
+      setMessage("Keep Going");
+    } else if (count === 3) {
+      setMessage("Almost There");
+    } else if (count === 4) {
+      setMessage("You Just Finshed");
+    }
+  }, [count]);
 
   const handleButtonClick1 = () => {
     setButton1Clicked(!button1Clicked);
     setButton2Clicked(false);
-    setMessage("Just Start And Just Do It");
+    if (count > 1) {
+      setCount(count - 1);
+    }
   };
 
   const handleButtonClick2 = () => {
     setButton2Clicked(!button2Clicked);
     setButton1Clicked(false);
     setMessage("You Just Finshed");
+    if (count < 4) {
+      setCount(count + 1);
+    }
   };
 
   return (
